@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <h1>Check out these wishlists</h1> <br>
+
+    <div>
+        <% if (wish.length > 0) { %> 
+            <% wish.forEach(wish => { %>
+                <!--<a href="http://localhost:3000/:" + <%= wish.user %></a> <h2><%= wish.user %> - <%= wish.wishitem %></h2><br>-->
+                <a href=:<%= wish.user %> </a><h2><%= wish.user %> - <%= wish.wishitem %></h2><br>
+
+            <% }) %>
+        <% } else { %>
+            <h2>Ingen ønsker</h2>
+        <% } %>
+    </div>
+</body>
+</html>

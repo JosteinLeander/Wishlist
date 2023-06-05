@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <div class="logginn">
+        <h3>"Become a pretentious wisher!"</h3>
+        <form action="/sign-up" method="post">
+            <input type="text" name="username" placeholder="username" required> <br> <br>
+            <input type="text" name="password" placeholder="password" required> <br> <br>
+            <input type="text" name="password" placeholder="password" required> <br> <br>
+            <div class="feedback" id="feedback"> <%= feedback %> </div> <br>
+            <input type="submit" name="what" value="Sign up!">
+
+        </form>
+    </div>
+</body>
+</html>

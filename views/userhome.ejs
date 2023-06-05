@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <br> <br>
+
+    <form action="/add" method="post">
+        <input type="hidden" name="username" value= <%= user %> />
+        <input type="hidden" name="number" value= <%= wish.length + 1 %> />
+        <input class="addnew" type="text" name="wishitem" placeholder="add another item to the list..." required>
+        <input class="addbtn" type="submit" name="addbtn" value="Add"> <br> <br>
+    </form> <br>
+
+    <div>
+        <% if (wish.length > 0) { %> 
+            <% wish.forEach(wish => { %>
+                <% if (wish.number == 1) { %>
+                    <h1><%= wish.number %>. <%= wish.wishitem %></h1><br>
+                <% } else { %>
+                    <h2><%= wish.number %>. <%= wish.wishitem %></h2><br>
+                <% } %>
+            <% }) %>
+        <% } else { %>
+            <h2>Ingen ønsker</h2>
+        <% } %>
+    </div>
+</body>
+</html>

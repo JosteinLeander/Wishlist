@@ -1,0 +1,19 @@
+<ul id="menu">
+  <li><p>Logo</p></li>
+  
+    <!-- Logg inn eller Logg ut -->
+    <% if (user != 'undefined') { %>
+      <% if (user != '') { %>
+          <li style="margin-left: 35%;"><p>Wishlist - <%= user %></li>
+          <li style="float: right;"><p><a href="/LoggUt">log out</a></p></li>
+      <% } else { %>
+          <li style="margin-left: 35%;"><p>Wishlist</p></li>
+          <li style="float: right;"> <a href="/sign-in">Logg inn</a></li>
+      <% } %>
+    <% } else { %>
+        <li style="margin-left: 35%;">Wishlist</li>
+        <li style="float: right;"><a href="/sign-in">Logg inn</a></li>
+    <% } %>
+</ul>  
+<hr>
+  

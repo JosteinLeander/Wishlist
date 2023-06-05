@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <br> <br>
+
+    <div>
+        <% if (wish.length > 0) { %> 
+            <% wish.forEach(wish => { %>
+                <h2><%= wish.number %> - <%= wish.wishitem %></h2><br>
+            <% }) %>
+        <% } else { %>
+            <h2>Ingen ønsker</h2>
+        <% } %>
+    </div>
+</body>
+</html>
